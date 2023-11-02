@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.start_window {
+  width: 98%;
+  height: 95vh;
+  margin: 1%;
+  position: absolute;
+  background-color: black;
+  /* background-image: url("./Assets/background_img.jpg"); */
+  background-image: url("https://img.freepik.com/free-photo/3d-dark-grunge-display-background-with-smoky-atmosphere_1048-16218.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 35px rgb(140, 0, 255);
+  transition-duration: 0.5s;
+  /* display: none; */
+}
+
+.start_window img {
+  width: 10%;
+}
+
+.start_window h1 {
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+}
+
+.start_window button {
+  font-size: 32px;
+  padding: 5px 20px;
+  border-radius: 18px;
+  margin-top: 20px;
+  background-color: aqua;
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+
+.start_window button:hover {
+  background-color: rgb(1, 196, 1);
+  transform: scale(1.1);
+  color: white;
+}
+
+body {
+  background-image: url("https://www.balls2marketing.co.uk/wp-content/uploads/homepage-gif-b2m.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(37, 9, 37);
+  color: white;
+  height: 65px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-family: "Roboto", sans-serif;
+  visibility: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  padding: 2px;
+  gap: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 25, 25, 0.801);
+  animation: Shadow_effect 15s ease-in-out infinite;
+}
+
+#Game_over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  display: none;
+}
+
+#Game_over h1 {
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+#Game_over img {
+  width: 200px;
+  padding-right: 40px;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+@keyframes Shadow_effect {
+  0% {
+    box-shadow: 0px 0px 20px rgba(255, 25, 25, 0.801);
+  }
+  20% {
+    box-shadow: 0px 0px 20px rgba(0, 174, 255, 0.979);
+  }
+  40% {
+    box-shadow: 0px 0px 20px rgba(248, 252, 0, 0.911);
+  }
+  60% {
+    box-shadow: 0px 0px 20px rgba(255, 25, 236, 0.801);
+  }
+  80% {
+    box-shadow: 0px 0px 20px rgba(25, 255, 94, 0.801);
+  }
+  90% {
+    box-shadow: 0px 0px 20px rgba(125, 25, 255, 0.801);
+  }
+}
+
+.box {
+  font-size: 5vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(223, 236, 255, 0.8);
+  border-radius: 10px;
+  color: green;
+  font-family: cursive;
+}
+
+.box:hover {
+  background-color: rgba(219, 255, 235, 0.801);
+  box-shadow: 0px 0px 25px rgb(174, 255, 209);
+  transform: scale(1.01);
+}
+
+.info {
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+.gameInfo {
+  padding: 0 34px;
+  font-family: "Baloo Bhaina 2", cursive;
+  margin-left: 50px;
+}
+
+.gameInfo h1 {
+  font-size: 3.5rem;
+  text-shadow: 4px 3px 3px rgb(204, 93, 255);
+  animation: h1_shadow 10s infinite;
+}
+
+@keyframes h1_shadow {
+  0% {
+    text-shadow: 4px 3px 3px rgb(204, 93, 255);
+  }
+  25% {
+    text-shadow: 4px 3px 3px rgb(255, 93, 93);
+  }
+  50% {
+    text-shadow: 4px 3px 3px rgb(255, 93, 93);
+  }
+  85% {
+    text-shadow: 4px 3px 3px rgb(93, 255, 174);
+  }
+}
+
+.imgbox1 img {
+  width: 0;
+  transition: width 1s ease-in-out;
+  position: absolute;
+}
+
+.imgbox2 img {
+  width: 0;
+  transition: width 1s ease-in-out;
+  position: absolute;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+#sound_on {
+  filter: invert(1);
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+#sound_off {
+  filter: invert(1);
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+#sound_on:hover, #sound_off:hover {
+  transform: scale(1.1);
+}
+
+#reset {
+  padding: 0px 35px;
+  background: red;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Baloo Bhaina 2";
+  font-size: 2rem;
+  font-weight: bolder;
+  display: block;
+  margin-top: 100px;
+  border: none;
+  transition-duration: 70ms;
+}
+
+#reset:hover {
+  background: green;
+  transform: scale(1.05);
+}
+
+.line {
+  background-color: black;
+  height: 9px;
+  width: 0;
+  position: absolute;
+  left: 6px;
+  background-color: #03fa1873;
+  transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .gameInfo {
+    margin-top: 34px;
+  }
+  .gameInfo h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+    background-color: rgba(25, 132, 255, 0.5);
+  }
+  body {
+    background-image: none;
+    background-color: rgb(202, 255, 255);
+  }
+}
+
+#exit {
+  background-color: rgba(255, 0, 0, 0.699);
+  font-size: 32px;
+  padding: 5px 20px;
+  border-radius: 18px;
+  margin: 25px;
+  background-color: aqua;
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+
+.exit_from_game {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+#exit:hover {
+  background-color: rgb(255, 0, 0);
+}

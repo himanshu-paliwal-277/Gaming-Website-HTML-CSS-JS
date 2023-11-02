@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lobster", cursive;
+}
+
+.start_window {
+  width: 96%;
+  height: 95vh;
+  margin: 12px 2%;
+  position: absolute;
+  background-color: rgb(75, 75, 75);
+  /* background-image: url("./Assets/background_image_for_start.jpg"); */
+  background-image: url("https://i.pinimg.com/474x/e5/8d/26/e58d26fd035c2c45390c7217a2521d30.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition-duration: 1s;
+  animation: Shadow_effect 25s ease-in-out infinite;
+  /* display: none; */
+}
+
+@keyframes Shadow_effect {
+  0% {
+    box-shadow: 0px 0px 50px rgba(255, 1, 1, 1);
+  }
+  20% {
+    box-shadow: 0px 0px 50px rgba(2, 175, 255, 1);
+  }
+  40% {
+    box-shadow: 0px 0px 50px rgba(251, 255, 0, 1);
+  }
+  60% {
+    box-shadow: 0px 0px 50px rgba(255, 0, 234, 1);
+  }
+  80% {
+    box-shadow: 0px 0px 50px rgba(0, 255, 76, 1);
+  }
+  90% {
+    box-shadow: 0px 0px 50px rgba(111, 0, 255, 1);
+  }
+}
+
+.start_window img {
+  width: 110px;
+  height: 100px;
+  border-radius: 35px;
+}
+
+.start_window h1 {
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  font-family: sans-serif;
+  text-shadow: 4px 4px 3px red;
+}
+
+.start_window button {
+  font-size: 32px;
+  padding: 5px 20px;
+  border-radius: 18px;
+  margin-top: 20px;
+  background-color: aqua;
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+
+.start_window button:hover {
+  transform: scale(1.05);
+  color: rgb(174, 0, 255);
+  background-color: rgb(73, 255, 185);
+}
+
+.game {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMvuqMh5wg9PfC4NJA99HciE0jvZ-K7dLwUw&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.hide {
+  display: none;
+}
+.startScreen {
+  width: 50%;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: auto;
+  background-color: rgba(15, 161, 180, 0.8);
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 2rem;
+  padding: 4% 0px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px rgb(255, 0, 0);
+}
+
+.startScreen h1 {
+  text-shadow: 9px 10px 3px black;
+  letter-spacing: 5px;
+}
+
+.startScreen p {
+  background-color: rgb(0, 190, 0);
+  padding: 16px;
+  margin: auto;
+  margin-top: 28px;
+  font-family: sans-serif;
+  border-radius: 20px;
+  width: 40%;
+}
+
+.startScreen p:hover {
+  background-color: rgb(0, 161, 0);
+}
+
+.startScreen p:active {
+  background-color: rgba(255, 99, 71, 0.685);
+}
+
+.score_box {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  width: 200px;
+  height: 200px;
+  border: 16px solid rgba(0, 153, 255, 0.555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: rotate 1s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 50px rgb(157, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score {
+  position: absolute;
+  text-align: center;
+  background-color: rgb(100, 224, 156, 0.7);
+  width: 200px;
+  height: 200px;
+  color: rgb(255, 255, 255);
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 1.7em;
+  box-shadow: 0px 0px 10px rgb(21, 255, 0);
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.highScore {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  background-color: rgba(100, 224, 156, 0.7);
+  color: white;
+  width: 200px;
+  line-height: 40px;
+  border-radius: 14px;
+  font-size: 1.7em;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 20px rgb(21, 255, 0);
+  letter-spacing: 2px;
+}
+
+.ClickToStart {
+  cursor: pointer;
+}
+.gameArea {
+  height: 100vh;
+  width: 400px;
+  margin: auto;
+  position: relative;
+  background: linear-gradient(black, rgb(100, 100, 100));
+  overflow: hidden;
+  border-left: 8px dashed white;
+  border-right: 8px dashed white;
+  box-shadow: 0px 0px 50px white;
+  animation: Shadow_effect 15s ease-in-out infinite;
+}
+.car {
+  background: url("./Assets/car.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 90px;
+  width: 52px;
+  position: absolute;
+  top: 520px;
+}
+.Opponents {
+  background: url("./Assets/opponent_car.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 88px;
+  width: 50px;
+  position: absolute;
+  top: 520px;
+  animation: move_cars 5s ease-in-out infinite;
+}
+
+.roadLines {
+  height: 100px;
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.836);
+  position: absolute;
+  margin-left: 195px;
+}
+
+#sound_on {
+  filter: invert(1);
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+#sound_on:hover {
+  transform: scale(1.1);
+}
+
+#sound_off {
+  filter: invert(1);
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+#sound_off:hover {
+  transform: scale(1.1);
+}
+
+#exit {
+  background-color: rgba(255, 0, 0, 0.699);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+#exit:hover {
+  background-color: rgb(255, 0, 0);
+}

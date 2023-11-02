@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.start_window {
+  width: 96%;
+  height: 95vh;
+  margin: 12px 2%;
+  position: absolute;
+  background-color: rgb(75, 75, 75);
+  /* background-image: url("./Assets/background_image_for_start.jpg"); */
+  background-image: url("https://img.freepik.com/free-vector/dark-grunge-room-interior-with-spotlight-shining-down_1048-12750.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition-duration: 1s;
+  animation: Shadow_effect 25s ease-in-out infinite;
+  /* display: none; */
+}
+
+@keyframes Shadow_effect {
+  0% {
+    box-shadow: 0px 0px 50px rgba(255, 1, 1, 1);
+  }
+  20% {
+    box-shadow: 0px 0px 50px rgba(2, 175, 255, 1);
+  }
+  40% {
+    box-shadow: 0px 0px 50px rgba(251, 255, 0, 1);
+  }
+  60% {
+    box-shadow: 0px 0px 50px rgba(255, 0, 234, 1);
+  }
+  80% {
+    box-shadow: 0px 0px 50px rgba(0, 255, 76, 1);
+  }
+  90% {
+    box-shadow: 0px 0px 50px rgba(111, 0, 255, 1);
+  }
+}
+
+.start_window img {
+  width: 160px;
+  height: 160px;
+  border-radius: 195px;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.start_window h1 {
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  font-family: sans-serif;
+  text-shadow: 4px 4px 3px red;
+}
+
+.start_window button {
+  font-size: 32px;
+  padding: 5px 20px;
+  border-radius: 18px;
+  margin-top: 20px;
+  background-color: aqua;
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+
+.start_window button:hover {
+  transform: scale(1.05);
+  color: rgb(174, 0, 255);
+  background-color: rgb(73, 255, 185);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #d8e6e9;
+  background-image: url("./Assets/dinosaur_game_background.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+.game {
+  width: 600px;
+  height: 200px;
+  margin: auto;
+  transform: scale(2.26);
+  position: relative;
+  top: 250px;
+}
+
+#dino {
+  width: 80px;
+  height: 50px;
+  background-image: url("./Assets/dino_runnig.gif");
+  background-size: 100% 100%;
+  position: relative;
+  top: 143px;
+  left: 20px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 143px; /*distance from the top of the parent element*/
+  }
+
+  30% {
+    top: 115px;
+  }
+
+  50% {
+    top: 60px;
+  }
+
+  80% {
+    top: 115px;
+  }
+
+  100% {
+    top: 143px;
+  }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 102px;
+  left: 580px;
+  background-image: url("./Assets/cactus_image.png");
+  background-size: 20px 40px;
+  animation: cactus-block 1.2s infinite linear;
+}
+
+@keyframes cactus-block {
+  0% {
+    left: 578px;
+  }
+
+  100% {
+    left: -2px;
+  }
+}
+
+#path {
+  width: 100%;
+  height: 65px;
+  position: relative;
+  top: 354px;
+}
+
+#path .path_background {
+  width: 100%;
+  height: 65px;
+  background-image: url("./Assets/rock_image.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  opacity: 0.8;
+  animation: Motion 1s infinite linear;
+}
+
+@keyframes Motion {
+  from {
+    background-position: 1300px;
+  }
+  to {
+    background-position: 0px;
+  }
+}
+
+#game_start_box,
+#game_over_box {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  box-shadow: 0px 0px 20px green;
+  /* display: none; */
+}
+
+#game_start_box h2,
+#game_over_box h2 {
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 4px 5px 4px rgb(255, 0, 0);
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+#game_start_box button,
+#game_over_box button {
+  padding: 15px 30px;
+  border: none;
+  background-color: rgb(0, 187, 0);
+  border-radius: 20px;
+  font-size: 2rem;
+  margin-top: 16px;
+  color: white;
+  cursor: pointer;
+  transition-duration: 100ms;
+}
+
+#game_start_box button:hover,
+#game_over_box button:hover {
+  background-color: rgb(0, 212, 0);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgb(255, 0, 0);
+}
+
+#game_over_box {
+  display: none;
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.712);
+}
+
+#exit {
+  background-color: rgba(255, 0, 0, 0.699);
+}
+
+#exit:hover {
+  background-color: rgb(255, 0, 0);
+}

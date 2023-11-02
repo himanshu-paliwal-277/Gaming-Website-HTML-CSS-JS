@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Snake Game</title>
+    <link rel="shortcut icon" href="./img/snake_game_logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="start_window" id="start">
+      <img src="./img/snake_game_logo.png" alt="snake game logo" />
+      <h1>Snake Game</h1>
+      <button onclick="start()">Start</button>
+      <a href="../index.html">
+        <button id="exit">Exit</button>
+      </a>
+      <div id="loading"></div>
+    </div>
+    <div id="game_over">
+      <h1>Game Over</h1>
+      <button onclick="new_game()">New Game</button>
+      <a href="../index.html">
+        <button id="exit">Exit</button>
+      </a>
+    </div>
+    <div class="body">
+      <div id="scoreBox">Score: 0</div>
+      <div id="hiscoreBox">High Score: 0</div>
+      <div id="board"></div>
+    </div>
+    <img
+      src="../sound_on.png"
+      id="sound_on"
+      onclick="sound_on()"
+      alt="Sound on"
+    />
+    <img
+      src="../sound_off.png"
+      id="sound_off"
+      onclick="sound_off()"
+      alt="Sound off"
+    />
+  </body>
+  <script src="./script.js"></script>
+</html>

@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;400;700&family=Rubik+Bubbles&display=swap");
+
+/* start window */
+
+.start_window {
+  width: 98%;
+  height: 95vh;
+  margin: 1%;
+  position: absolute;
+  /* background-image: url("./Assets/background_img.jpg"); */
+  background-image: url("https://img.freepik.com/free-photo/3d-dark-grunge-display-background-with-smoky-atmosphere_1048-16218.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 35px white;
+  transition-duration: 2s;
+  /* display: none; */
+}
+
+.start_window img {
+  width: 15%;
+}
+
+.start_window h1 {
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+}
+
+.start_window button {
+  font-size: 32px;
+  padding: 5px 20px;
+  border-radius: 18px;
+  margin-top: 20px;
+  background-color: aqua;
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+
+.start_window button:hover {
+  background-color: rgb(1, 196, 1);
+  transform: scale(1.1);
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-image: url("./Assets/background_img.jpg"); */
+  background-image: url("https://img.freepik.com/free-photo/3d-dark-grunge-display-background-with-smoky-atmosphere_1048-16218.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+}
+
+.container .left_section {
+  width: 50%;
+  background-color: rgba(81, 255, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .right_section {
+  width: 50%;
+  background-color: rgba(81, 255, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sound_on {
+  filter: invert(1);
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+#sound_off {
+  filter: invert(1);
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+#sound_on:hover,
+#sound_off:hover {
+  transform: scale(1.1);
+}
+
+.container h1 {
+  font-size: 40px;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgba(1, 196, 1, 0.726);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0px -4px 15px rgb(9, 255, 0);
+  width: 90%;
+}
+
+.container .mistake {
+  background: rgb(76, 204, 255);
+  padding: 10px;
+  width: 60vmin;
+  font-size: 24px;
+  margin: 20px auto;
+  color: #fff;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+#gameBoard {
+  height: 70vmin;
+  width: 70vmin;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  animation: Shadow_effect 15s ease-in-out infinite;
+}
+
+@keyframes Shadow_effect {
+  0% {
+    box-shadow: 0px 0px 50px rgba(255, 1, 1, 1);
+  }
+  20% {
+    box-shadow: 0px 0px 50px rgba(2, 175, 255, 1);
+  }
+  40% {
+    box-shadow: 0px 0px 50px rgba(251, 255, 0, 1);
+  }
+  60% {
+    box-shadow: 0px 0px 50px rgba(255, 0, 234, 1);
+  }
+  80% {
+    box-shadow: 0px 0px 50px rgba(0, 255, 76, 1);
+  }
+  90% {
+    box-shadow: 0px 0px 50px rgba(111, 0, 255, 1);
+  }
+}
+
+.tile {
+  height: calc(100% / 9);
+  width: calc(100% / 9);
+  box-shadow: 0px 0px 3px rgb(33, 117, 0);
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.tile:hover {
+  background: rgba(150, 225, 255, 0.733);
+  box-shadow: 0px 0px 7px rgb(53, 255, 3);
+  transform: scale(1.04);
+}
+
+.filled {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.select-tile {
+  background: rgba(76, 204, 255, 0.8) !important;
+  box-shadow: 0px 0px 1px gray;
+}
+
+#digits {
+  width: 50vmin;
+  height: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+#digits .tile {
+  width: 30%;
+  min-height: 33%;
+  background: rgba(76, 204, 255, 0.801);
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#digits .tile:hover {
+  background: rgb(100, 211, 255);
+  box-shadow: 0px 0px 15px rgb(255, 0, 0);
+}
+
+#new_game {
+  width: 42%;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  top: -6px;
+  margin-bottom: 10px;
+  background-color: #05bd24d7;
+  color: white;
+  cursor: pointer;
+}
+
+#new_game:hover {
+  background-color: #01db25e1;
+  box-shadow: 0px 0px 20px #01db25e1;
+}
+
+#new_game:active {
+  background-color: #fc5757;
+}
+
+.border-right {
+  border-right: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.border-bottom {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+#delete {
+  position: absolute;
+  top: 76%;
+  color: #f00;
+  font-size: 30px;
+  cursor: pointer;
+  transition-duration: 100ms;
+}
+
+#delete:hover {
+  font-size: 35px;
+}
+
+.danger {
+  color: #f00;
+}
+
+@media (max-width: 600px) {
+  .tile {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .tile {
+    font-size: 16px;
+  }
+}
+
+#exit {
+  background-color: rgba(255, 0, 0, 0.699);
+}
+
+#exit:hover {
+  background-color: rgb(255, 0, 0);
+}

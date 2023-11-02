@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Car Racing Game</title>
+    <link rel="shortcut icon" href="./Assets/Car_game_logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="start_window" id="start">
+      <img src="./Assets/Car_game_logo.png" alt="Car_game_logo" />
+      <h1>Car Racing Game</h1>
+      <button onclick="start()">Start</button>
+      <a href="../index.html">
+        <button id="exit">Exit</button>
+      </a>
+    </div>
+
+    <div class="game">
+      <div class="score_box">
+        <div class="score"></div>
+      </div>
+      <div class="highScore"></div>
+      <div class="startScreen">
+        <h1>Game Over</h1>
+        <p class="ClickToStart">New Game</p>
+        <a href="../index.html">
+          <p id="exit">Exit</p>
+        </a>
+      </div>
+      <div class="gameArea"></div>
+    </div>
+    <img
+      src="../sound_on.png"
+      id="sound_on"
+      onclick="sound_on()"
+      alt="Sound on"
+    />
+    <img
+      src="../sound_off.png"
+      id="sound_off"
+      onclick="sound_off()"
+      alt="Sound off"
+    />
+    <script src="script.js"></script>
+  </body>
+</html>

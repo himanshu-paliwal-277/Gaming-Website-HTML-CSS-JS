@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flappy Bird Game</title>
+    <link rel="shortcut icon" href="./images/Bird.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="background"></div>
+    <div id="game_body">
+      <img src="images/Bird.png" alt="bird-img" class="bird" id="bird-1" />
+      <div class="message">
+        <button onclick="Enter_to_start()">Play</button>
+        <a href="../index.html">Exit</a>
+        <h1>Enter To Start Game</h1>
+        <p><span style="color: red">&uarr;</span> ArrowUp to Control</p>
+      </div>
+      <div class="score">
+        <p id="high_score">High Score : <span id="high_score_value"></span></p>
+        <span class="score_title"></span>
+        <span class="score_val"></span>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

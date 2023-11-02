@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- AOS JS library CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Gaming Website</title>
+    <link rel="shortcut icon" href="./Assets/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide slide_show"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./Assets/snake_game_background_img.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div id="snake">
+            <img src="./Assets/snake_body.jpg" alt="snake_body" />
+            <img src="./Assets/snake_body.jpg" alt="snake_body" />
+            <img src="./Assets/snake_body.jpg" alt="snake_body" />
+            <img src="./Assets/snake_body.jpg" alt="snake_body" />
+            <img src="./Assets/Snake_face_gif.gif" alt="Snake_face_gif" />
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Assets/dinosaur_game_background_img.jfif"
+            class="d-block w-100"
+            alt="..."
+          />
+          <img src="./Assets/dino_runnig.gif" alt="dino_runnig" />
+          <img src="./Assets/cactus_image.png" alt="cactus_image" />
+          <div id="dino_path"></div>
+        </div>
+        <div class="carousel-item">
+          <!-- <img src="../4. Flappy Bird Game/images/background-img-static.png" class="d-block w-100" alt="..."> -->
+          <img
+            src="./Assets/flappy-bird-background-img.png"
+            class="d-block w-100"
+            alt="..."
+          />
+          <img src="./Assets/flappy_bird.gif" alt="Flappy Bird" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <nav>
+      <img src="./Assets/website_logo.png" alt="website_logo" />
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="./About_us.html">About Us</a></li>
+        <li><a href="./Contact_us.html">Contact Us</a></li>
+      </ul>
+      <a href="./Login_form.html">
+        <button id="btn" type="button" class="btn btn-primary">Login</button>
+      </a>
+    </nav>
+    <div class="content">
+      <h1>Gaming Website</h1>
+      <h4>The Best Game here</h4>
+      <div class="container">
+        <p>Play</p>
+        <section class="animation">
+          <div class="first"><div>Snake Game</div></div>
+          <div class="second"><div>Car Racing Game</div></div>
+          <div class="third"><div>Dinosaur Game</div></div>
+        </section>
+      </div>
+    </div>
+    <div id="make_space_between_bg_game"></div>
+    <div id="games">
+      <div id="game-1" class="game_section" data-aos="fade-left">
+        <a href="./3. Snake Game/index.html">
+          <img
+            src="./Assets/snake_game_logo.png"
+            alt="snake_game_logo"
+            data-aos="zoom-in-down"
+          />
+        </a>
+        <h1>Snake Game</h1>
+      </div>
+      <div id="game-2" class="game_section" data-aos="fade-right">
+        <a href="./5. Car racing game/index.html">
+          <img
+            src="./Assets/Car_game_logo.png"
+            alt="car_game_logo"
+            data-aos="zoom-in-down"
+          />
+        </a>
+        <h1>Car Racing Game</h1>
+      </div>
+      <div id="game-3" class="game_section" data-aos="fade-left">
+        <a href="./4. Flappy Bird Game/index.html">
+          <img
+            src="./Assets/Flappy_bird_logo.png"
+            alt="flappy_bird logo"
+            data-aos="zoom-in-down"
+          />
+        </a>
+        <h1>Flappy Bird Game</h1>
+      </div>
+      <div id="game-4" class="game_section" data-aos="fade-right">
+        <a href="./6. Dino_game/index.html">
+          <img
+            src="./Assets/Dinosaur_logo.jpg"
+            alt="Dinosaur_logo"
+            data-aos="zoom-in-down"
+          />
+        </a>
+        <h1>Dinosaur Game</h1>
+      </div>
+      <div id="game-5" class="game_section" data-aos="fade-left">
+        <a href="./1. Tic Tac Toe Game/index.html">
+          <img
+            src="./Assets/tic_tac_toe_logo.png"
+            alt="tic_tac_toe_logo"
+            data-aos="zoom-in-down"
+          />
+        </a>
+        <h1>Tic Tac Toe</h1>
+      </div>
+      <div id="game-6" class="game_section" data-aos="fade-right">
+        <a href="./2. Sudoku game/index.html">
+          <img
+            src="./Assets/Sudoku_game_logo.png"
+            alt="Sudoku_game_logo"
+            data-aos="zoom-in-down"
+          />
+        </a>
+        <h1>Sudoku Game</h1>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright © www.GamingWebsite.com. All rights reserved!</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 200, // offset (in px) from the original trigger point
+        // delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1400, // values from 0 to 3000, with step 50ms
+        // easing: "ease", // default easing for AOS animations
+        // once: false, // whether animation should happen only once - while scrolling down
+        // mirror: false, // whether elements should animate out while scrolling past them
+        // anchorPlacement: "top-bottom", // defines which position of the element regarding to window should
+      });
+    </script>
+  </body>
+</html>

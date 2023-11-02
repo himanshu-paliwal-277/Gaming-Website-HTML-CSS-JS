@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dinosaur Game</title>
+    <link rel="shortcut icon" href="./Assets/Dinosaur_logo.jpg" type="image/x-icon">
+  </head>
+  <body>
+    <div class="start_window" id="start">
+      <img src="./Assets/Dinosaur_logo.jpg" alt="game_logo" />
+      <h1>Dinosaur Game</h1>
+      <button id="btn" onclick="start()">Start</button>
+      <a href="../index.html">
+        <button id="exit">Exit</button>
+      </a>
+    </div>
+    <div id="game_start_box">
+      <h2>Welcome to Game</h2>
+      <button onclick="dinosaur_game()">Play</button>
+    </div>
+    <div id="game_over_box">
+      <h2>Game Over</h2>
+      <button onclick="reload_game()">Restart</button>
+    </div>
+    <div class="game">
+      <div id="dino"></div>
+      <div id="cactus"></div>
+    </div>
+    <div id="path">
+      <div class="path_background"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

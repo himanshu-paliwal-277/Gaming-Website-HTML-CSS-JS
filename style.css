@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: rgba(0, 255, 255, 0.788);
+  color: rgb(0, 162, 255);
+}
+
+body {
+  background-color: rgb(97, 97, 97);
+  font-family: "Roboto";
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(255, 2, 2, 0.055);
+  border-radius: 10px;
+  background-color: rgb(218, 165, 20);
+  background-image: url("./Assets/game_page_background.jpg");
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(3, 196, 255, 0.75);
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px black;
+  /* background-image: url("./Assets/game_page_background.jpg"); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffbf;
+}
+
+.slide_show {
+  position: absolute;
+  top: 0px;
+  opacity: 0.4;
+  z-index: 1;
+  height: 100vh;
+}
+
+.slide_show button {
+  z-index: 1;
+}
+
+nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.685);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+  width: 70px;
+  margin: 5px;
+  /* cursor: pointer; */
+  cursor: url("./Assets/rocket.png"), auto;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: rgb(255, 255, 255);
+  margin: 13px;
+  cursor: url("./Assets/rocket.png"), auto;
+}
+
+nav ul li a:hover {
+  color: tomato;
+  text-decoration: underline;
+}
+
+nav #btn {
+  padding: 10px 25px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  cursor: url("./Assets/rocket.png"), auto;
+}
+
+nav #btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px white;
+  background-color: rgb(0, 162, 255);
+}
+
+.content {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  top: 205px;
+  left: 127px;
+  color: white;
+  /* border: 2px solid red; */
+}
+
+.content h1 {
+  font-size: 3.26rem;
+  animation: shadow 10s ease-in-out infinite;
+}
+
+@keyframes shadow {
+  0% {
+    text-shadow: 3px 3px 2px rgb(162, 0, 255);
+  }
+  20% {
+    text-shadow: 3px 3px 2px rgb(255, 3, 3);
+  }
+  40% {
+    text-shadow: 3px 3px 2px rgb(0, 132, 255);
+  }
+  60% {
+    text-shadow: 3px 3px 2px rgb(72, 255, 0);
+  }
+  80% {
+    text-shadow: 3px 3px 2px rgb(0, 247, 255);
+  }
+}
+
+.content h4 {
+  color: #ffffffa6;
+}
+
+/* Text Animation */
+.container {
+  color: #ffffff;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+.container p {
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.3),
+    0 0 3px rgba(255, 255, 255, 0.3);
+  margin-top: 10px;
+}
+
+.animation {
+  height: 50px;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height: 2.81rem;
+  margin-bottom: 2.81rem;
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 10s infinite;
+}
+
+.first div {
+  background-color: #20a7d8;
+}
+
+.second div {
+  background-color: #cd921e;
+}
+
+.third div {
+  background-color: #c10528;
+}
+
+@keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -5.62rem;
+  }
+  30% {
+    margin-top: -5.62rem;
+  }
+  40% {
+    margin-top: -11.24rem;
+  }
+  60% {
+    margin-top: -11.24rem;
+  }
+  70% {
+    margin-top: -5.62rem;
+  }
+  80% {
+    margin-top: -5.62rem;
+  }
+  90% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+img[alt="Flappy Bird"] {
+  width: 350px;
+  position: absolute;
+  top: 300px;
+  left: 500px;
+  z-index: 1;
+  animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    top: 150px;
+    left: -20px;
+  }
+  35% {
+    top: 150px;
+    left: 400px;
+  }
+  50% {
+    top: 250px;
+    left: 500px;
+  }
+  65% {
+    top: 250px;
+    left: 700px;
+  }
+  100% {
+    top: 100px;
+    left: 1400px;
+  }
+}
+
+#dino_path {
+  position: absolute;
+  top: 95vh;
+  width: 100%;
+  height: 180px;
+  background-image: url("./Assets/rock_image.jpg");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+img[alt="dino_runnig"] {
+  position: absolute;
+  top: 78vh;
+  width: 200px;
+  animation: Jump_dino 2s linear infinite;
+}
+
+@keyframes Jump_dino {
+  0% {
+    top: 78vh;
+  }
+  90% {
+    top: 78vh;
+  }
+  95% {
+    top: 60vh;
+  }
+  100% {
+    top: 78vh;
+  }
+}
+
+img[alt="cactus_image"] {
+  position: absolute;
+  top: 82vh;
+  left: 85%;
+  width: 50px;
+  animation: cactus_animation 2.1s linear infinite;
+}
+
+@keyframes cactus_animation {
+  0% {
+    left: 120%;
+  }
+  100% {
+    left: -10%;
+  }
+}
+
+#snake {
+  position: absolute;
+  top: 84vh;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  animation: snake_move 9s linear infinite;
+}
+
+@keyframes snake_move {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 1500px;
+  }
+}
+
+img[alt="snake_body"] {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-left: 2px;
+}
+
+img[alt="Snake_face_gif"] {
+  width: 60px;
+  height: 60px;
+  transform: rotate(-90deg);
+}
+
+#make_space_between_bg_game {
+  /* background-color: black; */
+  width: 100%;
+  height: 78vh;
+  /* height: 62vh; */
+}
+.game_section {
+  width: 70%;
+  height: 70vh;
+  margin: 5% 0px;
+  z-index: -100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  color: white;
+  background-image: url("./Assets/game_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  text-align: center;
+}
+
+@keyframes Shadow_effect_1 {
+  0% {
+    box-shadow: 0px 0px 40px rgba(255, 1, 1, 1);
+  }
+  20% {
+    box-shadow: 0px 0px 40px rgba(2, 175, 255, 1);
+  }
+  40% {
+    box-shadow: 0px 0px 40px rgba(251, 255, 0, 1);
+  }
+  60% {
+    box-shadow: 0px 0px 40px rgba(255, 0, 234, 1);
+  }
+  80% {
+    box-shadow: 0px 0px 40px rgba(0, 255, 76, 1);
+  }
+  90% {
+    box-shadow: 0px 0px 40px rgba(111, 0, 255, 1);
+  }
+}
+
+@keyframes Shadow_effect_2 {
+  0% {
+    box-shadow: 0px 0px 40px rgba(111, 0, 255, 1);
+  }
+  20% {
+    box-shadow: 0px 0px 40px rgba(0, 255, 76, 1);
+  }
+  40% {
+    box-shadow: 0px 0px 40px rgba(255, 0, 234, 1);
+  }
+  60% {
+    box-shadow: 0px 0px 40px rgba(251, 255, 0, 1);
+  }
+  80% {
+    box-shadow: 0px 0px 40px rgba(2, 175, 255, 1);
+  }
+  90% {
+    box-shadow: 0px 0px 40px rgba(255, 1, 1, 1);
+  }
+}
+
+.game_section a img {
+  width: 17%;
+  border-radius: 15px;
+  margin: 10px;
+  /* cursor: pointer; */
+  z-index: 2;
+  cursor: url("./Assets/rocket.png"), auto;
+}
+
+.game_section img:hover {
+  transform: scale(1.2) !important;
+}
+
+img[alt="car_game_logo"] {
+  /* width: 55%; */
+  width: 32% !important;
+}
+
+.game_section h1 {
+  text-shadow: 2px 2px 3px rgb(251, 255, 0);
+}
+
+#games {
+  padding: 5%;
+  background-color: rgba(83, 170, 202, 0.467);
+  background-image: url("./Assets/game_page_background.jpg");
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+#games div:nth-child(even) {
+  margin-left: 30%;
+  animation: Shadow_effect_1 25s ease-in-out infinite;
+}
+
+#games div:nth-child(odd) {
+  animation: Shadow_effect_2 25s ease-in-out infinite;
+}
+
+#games div:nth-child(1) {
+  margin-top: 0px;
+}
+
+footer {
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sudoku Game</title>
+    <link rel="shortcut icon" href="./Assets/Sudoku_game_logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="start_window" id="start">
+      <img src="./Assets/Sudoku_game_logo.png" alt="" />
+      <h1>Sudoku Game</h1>
+      <button onclick="start()">Start</button>
+      <a href="../index.html">
+        <button id="exit">Exit</button>
+      </a>
+    </div>
+    <div class="container">
+      <div class="left_section">
+        <h1>Sudoku</h1>
+        <div id="gameBoard"></div>
+        <div class="mistake">Mistake: <span id="mistake">0</span>/5</div>
+      </div>
+      <img
+        src="../sound_on.png"
+        id="sound_on"
+        onclick="sound_on()"
+        alt="Sound on"
+      />
+      <img
+        src="../sound_off.png"
+        id="sound_off"
+        onclick="sound_off()"
+        alt="Sound off"
+      />
+      <div class="right_section">
+        <div id="digits"></div>
+        <button id="new_game" onclick="New_game()">New Game</button>
+        <div id="delete">
+          <i class="fa fa-trash"></i>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
